@@ -71,7 +71,7 @@ export default defineNuxtConfig({
       ]
     },
     baseURL: "/marberi-test/",
-    cdnURL: "/lk/"
+    cdnURL: "/marberi-test/"
   },
 
   css: ["~/shared/assets/styles/main.scss"],
