@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRoute, useRouter, useRuntimeConfig } from "nuxt/app";
+import { useRouter, useRuntimeConfig } from "nuxt/app";
 
 import { InputDate } from "~/shared/ui/inputs/input-date/index";
 import { Search } from "~/shared/ui/search/index";
@@ -10,7 +10,6 @@ import { StatusCard } from "~/shared/ui/status-card/index";
 import { Empty } from "~/shared/ui/empty/index";
 
 const router = useRouter()
-const route = useRoute()
 const baseApi = useRuntimeConfig().public.apiBase
 const dateInput = ref<Date[]>([])
 const searchTypes = ref<SearchTypes>({
@@ -115,8 +114,6 @@ const getData = async (isFirstLoad: boolean) => {
   const params = !isFirstLoad ? setQuery() : ''
   const req = await fetch(`${baseApi}method/orders.getTest${params}`)
   const res = await req.json()
-
-  console.log(route.fullPath);
 
   router.push(params)
 
