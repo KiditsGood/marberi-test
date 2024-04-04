@@ -70,7 +70,7 @@ export default defineNuxtConfig({
         { rel: "stylesheet", href: "/lk/fonts/fontawesome/stylesheet.css" }
       ]
     },
-    baseURL: "/lk/",
+    baseURL: "/marberi-test/",
     cdnURL: "/lk/"
   },
 
