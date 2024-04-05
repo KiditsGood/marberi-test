@@ -97,8 +97,12 @@ export default defineNuxtConfig({
   },
 
   ssr: false,
-  
+
   target: 'static',
+
+  generate: {
+    fallback: true
+  },
 
   components: false,
 
