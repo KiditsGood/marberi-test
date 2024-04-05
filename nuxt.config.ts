@@ -70,8 +70,8 @@ export default defineNuxtConfig({
         { rel: "stylesheet", href: "/lk/fonts/fontawesome/stylesheet.css" }
       ]
     },
-    baseURL: "/lk/",
-    cdnURL: "/lk/"
+    baseURL: "/",
+    cdnURL: "/"
   },
 
   css: ["~/shared/assets/styles/main.scss"],
@@ -99,10 +99,6 @@ export default defineNuxtConfig({
   ssr: false,
 
   target: 'static',
-
-  generate: {
-    fallback: true
-  },
 
   components: false,
 
